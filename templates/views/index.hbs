@@ -1,0 +1,30 @@
+{{!-- hbs handle bar files --}}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main</title>
+    <link rel="icon" href="img/weather.jpeg" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+
+<body>
+    {{!-- Header partial --}}
+    {{>header}}
+    <div class="main_content">
+        <p>Created by {{name}}</p>
+        <form>
+            <input />
+            <button>Search</button>
+        </form>
+        <p id="error_para" />
+        <p id="data_para" />
+    </div>
+    {{!-- Footer partial --}}
+    {{>footer}}
+</body>
+<script src="js/app.js"></script>
+
+</html>
