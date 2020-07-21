@@ -13,7 +13,7 @@ searchForm.addEventListener("submit", e => {
         return (errorElt.textContent = "Give me input");
     }
     dataElt.textContent = "Loading";
-    fetch(`http://localhost:3000/weather?address=${text}`).then(res => {
+    fetch(`/weather?address=${text}`).then(res => {
         res.json().then(data => {
             if (data.error) {
                 errorElt.textContent = "Error";

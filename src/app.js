@@ -4,6 +4,8 @@ const express = require("express");
 const app = express();
 const hbs = require("hbs");
 const { geoCode, getForecast } = require("./utils/utils.js");
+// port provided by HEROKU
+const port = process.env.PORT || 3000;
 
 console.log(__dirname);
 // console.log(path.join(__dirname, "../public"));
@@ -77,6 +79,6 @@ app.get("*", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log("Sever up on port 3000");
+app.listen(port, () => {
+    console.log(`Sever up on port ${port}`);
 });
